@@ -1,0 +1,511 @@
+/**
+ * 通用页面样式 - 宠物烘焙店管理系统
+ * 温暖的橙色主题 (#ff8a65)
+ */
+
+/* ========== 页面容器 ========== */
+.product-page,
+.order-page,
+.customer-page,
+.ingredient-page,
+.bom-page,
+.stats-page,
+.system-page {
+  padding: 20px;
+  min-height: calc(100vh - 84px);
+  background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+}
+
+/* ========== 卡片样式 ========== */
+.el-card {
+  border-radius: 16px !important;
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(255, 138, 101, 0.08) !important;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.el-card:hover {
+  box-shadow: 0 8px 24px rgba(255, 138, 101, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+.el-card__header {
+  background: linear-gradient(135deg, #fff9f6 0%, #ffffff 100%);
+  border-bottom: 1px solid #ffe8e0 !important;
+  padding: 18px 20px !important;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* ========== 搜索表单卡片 ========== */
+.search-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fff9f6 100%) !important;
+}
+
+.search-card .el-form--inline .el-form-item {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+/* ========== 按钮样式 ========== */
+.el-button--primary {
+  background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 138, 101, 0.3);
+  transition: all 0.3s ease;
+}
+
+.el-button--primary:hover {
+  background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+  box-shadow: 0 6px 20px rgba(255, 138, 101, 0.4);
+  transform: translateY(-2px);
+}
+
+.el-button--primary:active {
+  transform: translateY(0);
+}
+
+.el-button--primary[link] {
+  background: transparent;
+  box-shadow: none;
+  color: #ff8a65;
+  padding: 0 8px;
+}
+
+.el-button--primary[link]:hover {
+  color: #ff7043;
+  background: rgba(255, 138, 101, 0.1);
+  transform: none;
+  box-shadow: none;
+}
+
+.el-button--danger[link] {
+  color: #f56c6c;
+}
+
+.el-button--danger[link]:hover {
+  color: #f53d2d;
+  background: rgba(245, 108, 108, 0.1);
+}
+
+/* ========== 表格样式 ========== */
+.el-table {
+  --el-table-border-color: #ffe8e0;
+  --el-table-header-bg-color: #fff9f6;
+  --el-table-row-hover-bg-color: #fff5f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.el-table th.el-table__cell {
+  background: linear-gradient(135deg, #fff9f6 0%, #fff0e8 100%);
+  color: #ff7043;
+  font-weight: 600;
+  border-bottom: 2px solid #ffe8e0 !important;
+  padding: 14px 0;
+}
+
+.el-table td.el-table__cell {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.el-table__row:hover {
+  background: linear-gradient(135deg, #fff9f6 0%, #fff5f0 100%);
+}
+
+.el-table__empty-text {
+  color: #c0c4cc;
+  font-size: 14px;
+}
+
+/* 表格内图片 */
+.product-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-right: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* ========== 表单样式 ========== */
+.el-form-item__label {
+  font-weight: 500;
+  color: #5a6c7d;
+  font-size: 14px;
+}
+
+.el-input__wrapper,
+.el-textarea__inner {
+  border-radius: 8px;
+  border: 1px solid #e8ecef;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.el-input__wrapper:hover,
+.el-textarea__inner:hover {
+  border-color: #ffccbc;
+}
+
+.el-input__wrapper.is-focus,
+.el-textarea__inner:focus {
+  border-color: #ff8a65;
+  box-shadow: 0 0 0 2px rgba(255, 138, 101, 0.2);
+}
+
+.el-select .el-input__wrapper,
+.el-cascader .el-input__wrapper {
+  border-radius: 8px;
+}
+
+/* ========== 对话框样式 ========== */
+.el-dialog {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(255, 138, 101, 0.15);
+}
+
+.el-dialog__header {
+  background: linear-gradient(135deg, #fff9f6 0%, #ffffff 100%);
+  padding: 20px 24px;
+  border-bottom: 1px solid #ffe8e0;
+}
+
+.el-dialog__title {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.el-dialog__body {
+  padding: 24px;
+}
+
+.el-dialog__footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* ========== 分割线样式 ========== */
+.el-divider {
+  margin: 24px 0;
+}
+
+.el-divider__text {
+  font-weight: 600;
+  color: #ff7043;
+}
+
+/* ========== 标签样式 ========== */
+.el-tag {
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-weight: 500;
+  border: none;
+}
+
+.el-tag--success {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  color: #2e7d32;
+}
+
+.el-tag--warning {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  color: #ef6c00;
+}
+
+.el-tag--info {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  color: #616161;
+}
+
+/* ========== 分页样式 ========== */
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+
+.el-pagination {
+  --el-pagination-button-color: #5a6c7d;
+  --el-pagination-hover-color: #ff8a65;
+  --el-pagination-button-bg-color: #ffffff;
+  --el-pagination-button-disabled-bg-color: #f5f7fa;
+}
+
+.el-pagination .el-pager li {
+  border-radius: 6px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.el-pagination .el-pager li:hover {
+  color: #ff8a65;
+  background: rgba(255, 138, 101, 0.1);
+}
+
+.el-pagination .el-pager li.is-active {
+  background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3);
+}
+
+/* ========== 辅助类 ========== */
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.text-gray {
+  color: #909399;
+  font-size: 12px;
+}
+
+.text-danger {
+  color: #f56c6c;
+  font-weight: 600;
+}
+
+.text-success {
+  color: #67c23a;
+  font-weight: 600;
+}
+
+.text-primary {
+  color: #ff8a65;
+  font-weight: 600;
+}
+
+/* ========== SKU/宠物表单区域 ========== */
+.sku-item,
+.pet-form {
+  background: linear-gradient(135deg, #fff9f6 0%, #fff5f0 100%);
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #ffe8e0;
+  transition: all 0.3s ease;
+}
+
+.sku-item:hover,
+.pet-form:hover {
+  border-color: #ffccbc;
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.1);
+}
+
+/* ========== 上传组件样式 ========== */
+.avatar-uploader {
+  .el-upload {
+    border: 2px dashed #ffccbc !important;
+    border-radius: 12px !important;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #fff9f6 0%, #ffffff 100%);
+    
+    &:hover {
+      border-color: #ff8a65 !important;
+      background: linear-gradient(135deg, #fff5f0 0%, #fff9f6 100%);
+      transform: scale(1.02);
+    }
+  }
+}
+
+.avatar-uploader-icon {
+  font-size: 32px;
+  color: #ffab91;
+  width: 178px;
+  height: 178px;
+  text-align: center;
+  line-height: 178px;
+  transition: all 0.3s ease;
+}
+
+.avatar-uploader:hover .avatar-uploader-icon {
+  color: #ff8a65;
+}
+
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 图片上传列表 */
+.el-upload-list--picture-card .el-upload-list__item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.el-upload-list--picture-card .el-upload-list__item:hover {
+  transform: scale(1.05);
+}
+
+/* ========== 表单操作区 ========== */
+.form-actions {
+  margin-top: 32px;
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid #ffe8e0;
+  background: linear-gradient(135deg, #fff9f6 0%, #ffffff 100%);
+  border-radius: 12px;
+}
+
+/* ========== 警告提示 ========== */
+.el-alert {
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.el-alert--warning {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border: 1px solid #ffcc80;
+}
+
+.el-alert__title {
+  font-weight: 600;
+  color: #e65100;
+}
+
+/* ========== 加载状态 ========== */
+.el-loading-mask {
+  border-radius: 16px;
+}
+
+.el-loading-spinner .path {
+  stroke: #ff8a65;
+}
+
+.el-loading-spinner .el-loading-text {
+  color: #ff8a65;
+  font-weight: 500;
+}
+
+/* ========== 下拉菜单 ========== */
+.el-dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 138, 101, 0.15);
+  border: 1px solid #ffe8e0;
+  padding: 8px 0;
+}
+
+.el-dropdown-menu__item {
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+}
+
+.el-dropdown-menu__item:hover {
+  background: linear-gradient(135deg, #fff5f0 0%, #fff9f6 100%);
+  color: #ff8a65;
+}
+
+.el-dropdown-menu__item--divided {
+  border-top: 1px solid #ffe8e0;
+  margin-top: 6px;
+  padding-top: 10px;
+}
+
+/* ========== 开关样式 ========== */
+.el-switch {
+  --el-switch-on-color: #ff8a65;
+  --el-switch-off-color: #dcdfe6;
+}
+
+/* ========== 数字输入框 ========== */
+.el-input-number {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.el-input-number__decrease,
+.el-input-number__increase {
+  background: linear-gradient(135deg, #fff9f6 0%, #fff5f0 100%);
+  border-color: #e8ecef;
+  color: #ff8a65;
+  transition: all 0.3s ease;
+}
+
+.el-input-number__decrease:hover,
+.el-input-number__increase:hover {
+  background: #ff8a65;
+  color: #ffffff;
+}
+
+/* ========== 日期选择器 ========== */
+.el-date-picker {
+  border-radius: 8px;
+}
+
+.el-date-picker__header-label.active,
+.el-date-picker__header-label:hover {
+  color: #ff8a65;
+}
+
+.el-date-table td.selected .el-date-table-cell__text {
+  background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
+}
+
+.el-date-table td.today .el-date-table-cell__text {
+  color: #ff8a65;
+  font-weight: bold;
+}
+
+.el-date-table td.current:not(.disabled) .el-date-table-cell__text {
+  background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
+}
+
+/* ========== 级联选择器 ========== */
+.el-cascader-menu__item.is-active {
+  color: #ff8a65;
+  font-weight: 600;
+}
+
+.el-cascader-menu__item:hover {
+  background: rgba(255, 138, 101, 0.08);
+}
+
+/* ========== 响应式适配 ========== */
+@media (max-width: 768px) {
+  .product-page,
+  .order-page,
+  .customer-page,
+  .ingredient-page {
+    padding: 12px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .el-table {
+    font-size: 13px;
+  }
+}
